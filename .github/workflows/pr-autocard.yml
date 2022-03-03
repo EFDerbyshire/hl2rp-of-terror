@@ -1,10 +1,10 @@
 name: automation
 on: pull_request
 jobs:
-  github-actions-automate-projects:
+  ready-for-review:
     runs-on: ubuntu-latest
     steps:
-    - name: pr-to-card
+    - name: pr to project card
       uses: docker://takanabe/github-actions-automate-projects:v0.0.1
       if: github.event_name == 'pull_request' && github.event.action == 'opened'
       env:
