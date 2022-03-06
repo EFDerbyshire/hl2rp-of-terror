@@ -506,7 +506,7 @@ function PANEL:Init()
 
 	local deleteReturn = deleteInfo:Add("ixMenuButton")
 	deleteReturn:Dock(BOTTOM)
-	deleteReturn:SetText("NO! What am I doing - Go back!")
+	deleteReturn:SetText("No - I want to keep this character")
 	deleteReturn:DockMargin(100, 0, 200, 0)
 	deleteReturn:SizeToContents()
 	deleteReturn.DoClick = function()
@@ -523,7 +523,7 @@ function PANEL:Init()
 
 	local deleteConfirm = self.delete:Add("ixMenuButton")
 	deleteConfirm:Dock(BOTTOM)
-	deleteConfirm:SetText("Yes - I want to remove this character!")
+	deleteConfirm:SetText("Yes - I want to remove this character")
 	deleteConfirm:DockMargin(0, 0, 20, 0)
 	--deleteConfirm:SetContentAlignment(6)
 	deleteConfirm:SizeToContents()
@@ -863,7 +863,7 @@ function PANEL:Paint(width, height)
 		surface.SetDrawColor(ix.config.Get("color"))
 		surface.DrawRect(0, 50, width, 1)
 
-		draw.DrawText(L"loadTitle", "ixSubTitleFont", 30, 2, ix.config.Get("color"), TEXT_ALIGN_LEFT)
+		draw.DrawText(L"Your Characters", "ixSubTitleFont", 30, 2, ix.config.Get("color"), TEXT_ALIGN_LEFT)
 
 end
 
