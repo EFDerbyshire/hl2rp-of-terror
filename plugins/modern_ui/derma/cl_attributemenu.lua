@@ -72,7 +72,6 @@ function PANEL:Init()
 			bar:SetTall(64)
             --bar:SetText(Format("%s [%.1f/%.1f] (%.1f%%)", L(v.name), value, maximum, value / maximum * 100))
 			bar:SetText(Format("%s (%.1f%%)", L(v.name), value / maximum * 100))
-            bar:SetAtribIcon(Format("%s", L(v.name)))
 
             if (attributeBoost) then
                 bar:SetBoost(attributeBoost)
@@ -94,7 +93,7 @@ vgui.Register("ixAttribute", PANEL, "EditablePanel")
 
 hook.Add("CreateMenuButtons", "ixAttribute", function(tabs)
 	if (hook.Run("BuildAttributeMenu") != false) then
-		tabs["Skile"] = function(container)
+		tabs["Skills"] = function(container)
 			container:Add("ixAttribute")
 		end
 	end
