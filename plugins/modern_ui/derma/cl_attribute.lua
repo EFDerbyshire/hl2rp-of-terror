@@ -165,32 +165,6 @@ function PANEL:SetText(text)
 	--self.AttriImage:SetImage("darkrpg/skills/none.png")
 end
 
-function PANEL:SetAtribIcon(text)
-	self.AttriImage = vgui.Create("DImage", self)
-	self.AttriImage:SetPos(10, 10)
-	self.AttriImage:SetSize(45, 45)		
-	self.AttriImage:SetImage("darkrpg/skills/none.png")
-	if text == "Wytwarzanie" then -- Text = perk name, then image. Have fun - it sucks .
-		self.AttriImage:SetImage("darkrpg/skills/crafting.png")
-	elseif text == "Farmerstwo" then
-		self.AttriImage:SetImage("darkrpg/skills/farming.png")
-	elseif text == "Medyk" then
-		self.AttriImage:SetImage("darkrpg/skills/job_ems.png")
-	elseif text == "Policjant" then
-		self.AttriImage:SetImage("darkrpg/skills/job_police.png")
-	elseif text == "Gangster" then
-		self.AttriImage:SetImage("darkrpg/skills/job_gangster.png")
-	elseif text == "Kurier/Magazynier" then
-		self.AttriImage:SetImage("darkrpg/skills/job_courier.png")
-	elseif text == "Stolarstwo" then
-		self.AttriImage:SetImage("darkrpg/skills/woodcutting.png")
-	elseif text == "Górnictwo" then
-		self.AttriImage:SetImage("darkrpg/skills/mining.png")
-	elseif text == "Kaktusownia" then
-		self.AttriImage:SetImage("darkrpg/skills/cooking.png") -- poop
-	end
-end
-
 function PANEL:SetReadOnly()
 	self.sub:Remove()
 	self.add:Remove()
